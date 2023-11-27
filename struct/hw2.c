@@ -22,11 +22,11 @@ void arrangeGPA(struct Student std[],int n ){
 int findStudent(struct Student std[], int n, int id){
     for(int i=0;i<n;i++){
         if(std[i].ID==id){
-            printStudent(std, n);
+            printf("%d %s %d %f", std[i].ID, std[i].Name, std[i].age, std[i].GPA);
             return 1;
         }
     }
-    printf("khong tim thay sinh vien nao co ma nhu tren !");
+    printf("khong tim thay sinh vien nao co ma nhu tren !\n");
     return 0;
     
 }
@@ -65,9 +65,9 @@ int main(){
     printf("danh sach sv sau khi sap xep theo GPA la: ");
     printStudent(std,n);
     printf("nhap ma sinh vien can tim: ");
-    scanf("%d", id);
+    scanf("%d", &id);
     if(findStudent(std,n,id) == 0){
-        printf("khong tim thay sv co ma nhu tren");
+        printf("khong tim thay sinh vien nao co ma nhu tren !\n");
     }
     return 0;
 }
